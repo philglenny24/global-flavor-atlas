@@ -566,3 +566,50 @@ body {
 .back-link:hover {
   background: var(--accent-orange);
 }
+
+/* --- 7. TERMS PAGE --- */
+.terms-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 5% 80px;
+}
+
+.terms-content h1 {
+  font-family: var(--font-header);
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.terms-content > p {
+  text-align: center;
+  color: var(--text-gray);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.terms-content h2 {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-orange);
+  padding-bottom: 0.5rem;
+}
+
+.terms-content p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.terms-content a {
+  color: var(--accent-orange);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.terms-content a:hover {
+  text-decoration: underline;
+}
