@@ -4,7 +4,11 @@ A modern recipe discovery web app for exploring authentic meals from around the 
 
 Users can search for recipes on the homepage, browse featured famous dishes on the Explore page, and open each recipe to see full ingredients and cooking instructions.
 
----
+
+##  Live Demo
+You can deploy the website using GitHub Pages or any hosting platform.
+
+*https://philglenny24.github.io/global-flavor-atlas/*
 
 ## Features
 
@@ -21,28 +25,10 @@ Users can search for recipes on the homepage, browse featured famous dishes on t
 - JavaScript
 - TheMealDB API
 
-## Design
-
-The website uses a complementary color scheme with three main colors:
-
-- **Primary Green** (#2d5a27) - Used for headings, buttons, and accents
-- **Accent Orange** (#d35400) - Used for highlights and interactive elements
-- **Background Cream** (#fdfcf0) - Used for the main background
-
-### Typography
-
-The website uses three font families for different purposes:
-
-- **Playfair Display** (serif) - Used for headings and titles
-- **Lato** (sans-serif) - Used for body text and general content
-- **JetBrains Mono** (monospace) - Used for UI elements and buttons
-
 ## Project Structure
 
 - `index.html` — homepage with search input and call-to-action
 - `explore.html` — recipe browsing page with cards and modal recipe display
-- `privacy.html` — page for the privacy policy
-- `terms.html` — page for the terms of service
 - `style.css` — application styling and responsive layout
 - `index.js` — page logic for search, recipe display, and modal behavior
 - `README.md` — project documentation
@@ -95,6 +81,11 @@ cd global-flavor-atlas
 ## License
 
 This project is available under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- [TheMealDB](https://www.themealdb.com/) for recipe data
+- Unsplash for sample recipe images
 
 ## Acknowledgments
 
