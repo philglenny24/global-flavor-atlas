@@ -1,0 +1,27 @@
+{
+  "name": "global-flavor-atlas",
+  "version": "1.0.0",
+  "description": "A modern recipe discovery web app for exploring authentic meals from around the world.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philglenny24/global-flavor-atlas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/philglenny24/global-flavor-atlas/issues"
+  },
+  "homepage": "https://github.com/philglenny24/global-flavor-atlas#readme",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
