@@ -6,7 +6,7 @@ Users can search for recipes on the homepage, browse featured famous dishes on t
 
 ---
 
-##  Features
+## Features
 
 - **Search recipes via TheMealDB API** from the homepage
 - **Explore famous meals** with clickable recipe cards
@@ -14,14 +14,30 @@ Users can search for recipes on the homepage, browse featured famous dishes on t
 - **Responsive layout** for desktop and mobile
 - **Modern UI styling** using custom CSS and Google fonts
 
-##  Tech Stack
+## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
 - TheMealDB API
 
-##  Project Structure
+## Design
+
+The website uses a complementary color scheme with three main colors:
+
+- **Primary Green** (#2d5a27) - Used for headings, buttons, and accents
+- **Accent Orange** (#d35400) - Used for highlights and interactive elements
+- **Background Cream** (#fdfcf0) - Used for the main background
+
+### Typography
+
+The website uses three font families for different purposes:
+
+- **Playfair Display** (serif) - Used for headings and titles
+- **Lato** (sans-serif) - Used for body text and general content
+- **JetBrains Mono** (monospace) - Used for UI elements and buttons
+
+## Project Structure
 
 - `index.html` — homepage with search input and call-to-action
 - `explore.html` — recipe browsing page with cards and modal recipe display
@@ -29,13 +45,14 @@ Users can search for recipes on the homepage, browse featured famous dishes on t
 - `index.js` — page logic for search, recipe display, and modal behavior
 - `README.md` — project documentation
 
-##  Installation
+## Installation
 
 1. Clone the repository:
 
 ```bash
 git clone https://github.com/philglenny24/global-flavor-atlas.git
 ```
+
 2. Navigate to the project folder:
 
 ```bash
@@ -44,7 +61,7 @@ cd global-flavor-atlas
 
 3. Open `index.html` or `explore.html` in your browser.
 
-##  Usage
+## Usage
 
 ### Homepage Search
 
@@ -58,7 +75,7 @@ cd global-flavor-atlas
 2. Click any recipe card.
 3. The full recipe appears in an overlay with ingredient and instruction details.
 
-##  Notes
+## Notes
 
 - The homepage search uses **TheMealDB** endpoints:
   - `search.php?s=` for name search
@@ -66,18 +83,18 @@ cd global-flavor-atlas
   - `lookup.php?i=` for recipe details
 - The Explore page cards are currently populated with a sample set of famous meals.
 
-##  Author
+## Author
 
 **Philip Simiyu**
 
 - GitHub: https://github.com/philglenny24
 - Email: philip10simiyu@gmail.com
 
-##  License
+## License
 
 This project is available under the [MIT License](LICENSE).
 
-##  Acknowledgments
+## Acknowledgments
 
 - [TheMealDB](https://www.themealdb.com/) for recipe data
 - Unsplash for sample recipe images
