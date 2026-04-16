@@ -1,32 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Flavor Atlas | Discover Recipes</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Flavor Atlas | Professional Recipe Discovery</title>
 
-</head>
-<body>
-    <header>
-        <nav>
-            <h1 class="logo">Global Flavor Atlas</h1>
-            <div class="search-container">
-                <input type="text" id="recipe-search" placeholder="Search by ingredient or dish ...">
-                <button id="search-btn">Search</button>
-            </div>
-        </nav>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🌍</span>
+          <span class="logo-text">FlavorAtlas</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="/explore.html">Explore</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main id="app">
-        <section id="filters">
-        </section>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover the World Through Your Kitchen.</h1>
+        <p class="hero-subtitle">
+          Explore over 500+ authentic recipes from 20+ countries. Filter by
+          ingredients, region, or dietary preferences.
+        </p>
 
-        <section id="recipe-grid">
-            <p class="Loading">Hungry? Loading recipes...</p>
-        </section>
-    </main>
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="What would you like to cook? (e.g. Beef, Pasta, Tacos)"
+          />
+          <button id="search-btn" class="btn-primary">Find Recipes</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-info">
+      <div class="info-header">
+        <h2>Explore. Cook. Connect.</h2>
+        <p>
+          Global Flavor Atlas brings authentic dishes from around the world into
+          your kitchen with easy-to-follow recipes, cultural context, and
+          ingredient filters that help you cook with confidence.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Authentic Recipes</h3>
+          <p>
+            Find more than 500 recipes from over 20 countries, curated to
+            showcase regional techniques and true flavor combinations.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Fast Ingredient Search</h3>
+          <p>
+            Search by ingredient, cuisine, or dietary preference and discover
+            recipes that match what you already have in your pantry.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Perfect for Every Cook</h3>
+          <p>
+            From beginners to seasoned home chefs, our recipe layout helps you
+            prepare meals with confidence and learn new culinary styles.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>Global Flavor Atlas</h4>
+          <p>
+            A culinary project built with passion and Vanilla web technologies.
+            Data provided by TheMealDB API.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li>
+              <a href="https://github.com/philglenny24/global-flavor-atlas"
+                >GitHub Repository</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Philip Simiyu.</p>
+      </div>
+    </footer>
+
+    <div id="searchModal" class="explore-modal">
+      <div class="explore-modal-content">
+        <button class="explore-modal-close" onclick="closeSearch()">×</button>
+        <div id="searchResults" class="explore-recipe-details"></div>
+      </div>
+    </div>
 
     <script type="module" src="index.js"></script>
-</body>
+  </body>
 </html>

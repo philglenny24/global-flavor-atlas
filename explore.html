@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Recipes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🌍</span>
+          <span class="logo-text">FlavorAtlas</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#explore">Explore</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="explore" class="explore-main">
+      <section class="explore-hero">
+        <h1>Explore Famous Meals</h1>
+        <p>
+          Discover world-famous dishes with step-by-step recipes. Click any card
+          to see full ingredients and instructions.
+        </p>
+      </section>
+
+      <section class="explore-grid" aria-label="Famous recipe cards">
+        <article class="explore-card" onclick="openRecipe('sushi')">
+          <img
+            src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=80"
+            alt="Sushi platter"
+          />
+          <div class="explore-card-content">
+            <h3>Sushi Roll</h3>
+            <p>
+              Classic Japanese sushi with vinegared rice, nori, and fresh
+              filling.
+            </p>
+            <button class="btn-primary">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="explore-card" onclick="openRecipe('padThai')">
+          <img
+            src="https://images.unsplash.com/photo-1637806930600-37fa8892069d?auto=format&fit=crop&w=800&q=80"
+            alt="Pad Thai noodles"
+          />
+          <div class="explore-card-content">
+            <h3>Pad Thai</h3>
+            <p>
+              Sweet and tangy stir-fried noodles with shrimp, tofu, and crushed
+              peanuts.
+            </p>
+            <button class="btn-primary">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="explore-card" onclick="openRecipe('tacos')">
+          <img
+            src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=800&q=80"
+            alt="Tacos al pastor"
+          />
+          <div class="explore-card-content">
+            <h3>Tacos al Pastor</h3>
+            <p>
+              Mexican street tacos with marinated pork, pineapple, and fresh
+              cilantro.
+            </p>
+            <button class="btn-primary">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="explore-card" onclick="openRecipe('pizza')">
+          <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+            alt="Margherita pizza"
+          />
+          <div class="explore-card-content">
+            <h3>Margherita Pizza</h3>
+            <p>
+              Neapolitan pizza topped with fresh mozzarella, basil, and tomato
+              sauce.
+            </p>
+            <button class="btn-primary">View Recipe</button>
+          </div>
+        </article>
+      </section>
+
+      <div id="recipeModal" class="explore-modal">
+        <div class="explore-modal-content">
+          <button class="explore-modal-close" onclick="closeRecipe()">×</button>
+          <div id="recipeDetails" class="explore-recipe-details"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h4>Global Flavor Atlas</h4>
+                <p>A culinary project built with passion and Vanilla web technologies. Data provided by TheMealDB API.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="https://github.com/philglenny24/global-flavor-atlas">GitHub Repository</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Philip Simiyu.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
