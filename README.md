@@ -41,6 +41,8 @@ The website uses three font families for different purposes:
 
 - `index.html` — homepage with search input and call-to-action
 - `explore.html` — recipe browsing page with cards and modal recipe display
+- `privacy.html` — page for the privacy policy
+- `terms.html` — page for the terms of service
 - `style.css` — application styling and responsive layout
 - `index.js` — page logic for search, recipe display, and modal behavior
 - `README.md` — project documentation
