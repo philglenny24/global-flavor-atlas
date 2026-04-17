@@ -34,10 +34,15 @@
         </p>
 
         <div class="search-wrapper">
+          <select id="search-type" class="search-type">
+            <option value="ingredient">Ingredient</option>
+            <option value="name">Meal Name</option>
+            <option value="country">Country</option>
+          </select>
           <input
             type="text"
             id="search-input"
-            placeholder="What would you like to cook? (e.g. Beef, Pasta, Tacos)"
+            placeholder="Search by ingredient, meal name, or country"
           />
           <button id="search-btn" class="btn-primary">Find Recipes</button>
         </div>

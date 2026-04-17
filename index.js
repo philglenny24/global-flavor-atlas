@@ -124,9 +124,10 @@ window.recipes = recipes;
 
 // Search functionality for homepage
 const searchBtn = document.getElementById("search-btn");
+const searchType = document.getElementById("search-type");
 const searchInput = document.getElementById("search-input");
 
-if (searchBtn && searchInput) {
+if (searchBtn && searchInput && searchType) {
   searchBtn.addEventListener("click", searchRecipe);
   searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") searchRecipe();
@@ -135,15 +136,31 @@ if (searchBtn && searchInput) {
 
 async function searchRecipe() {
   const query = searchInput.value.trim();
+  const type = searchType.value;
+
   if (!query) {
-    alert("Please enter an ingredient or meal name");
+    alert("Please enter an ingredient, meal name, or country.");
     return;
   }
 
   try {
+    if (type === "country") {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?a=${encodeURIComponent(query)}`,
+      );
+      const data = await response.json();
+
+      if (data.meals && data.meals.length > 0) {
+        displayCountryResults(data.meals, query);
+      } else {
+        alert(`No meals found for country '${query}'. Try another country.`);
+      }
+      return;
+    }
+
     // First try to search by name
     const response = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`,
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`,
     );
     const data = await response.json();
 
@@ -152,7 +169,7 @@ async function searchRecipe() {
     } else {
       // If no meal found, try searching by ingredient
       const ingredientResponse = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`,
+        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`,
       );
       const ingredientData = await ingredientResponse.json();
 
@@ -172,6 +189,27 @@ async function searchRecipe() {
     console.error("Error fetching recipe:", error);
     alert("Error fetching recipe. Please try again.");
   }
+}
+
+function displayCountryResults(meals, country) {
+  const resultsDiv = document.getElementById("searchResults");
+  resultsDiv.innerHTML = `
+    <h2>Meals from ${country}</h2>
+    <div class="country-grid">
+      ${meals
+        .map(
+          (meal) => `
+      <div class="country-card">
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <h3>${meal.strMeal}</h3>
+      </div>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+
+  document.getElementById("searchModal").classList.add("show");
 }
 
 function displaySearchResult(meal) {

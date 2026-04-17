@@ -13,6 +13,7 @@ You can deploy the website using GitHub Pages or any hosting platform.
 ## Features
 
 - **Search recipes via TheMealDB API** from the homepage
+- **Search by country** to find meals and pictures from a selected region
 - **Explore famous meals** with clickable recipe cards
 - **Recipe modal display** with ingredients and preparation steps
 - **Responsive layout** for desktop and mobile
@@ -98,6 +99,7 @@ The test suite checks that:
 - The homepage search uses **TheMealDB** endpoints:
   - `search.php?s=` for name search
   - `filter.php?i=` for ingredient search
+  - `filter.php?a=` for country/area search
   - `lookup.php?i=` for recipe details
 - The Explore page cards are currently populated with a sample set of famous meals.
 
