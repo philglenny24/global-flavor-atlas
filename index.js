@@ -158,7 +158,6 @@ async function searchRecipe() {
       return;
     }
 
-    // First try to search by name
     const response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`,
     );
@@ -167,14 +166,12 @@ async function searchRecipe() {
     if (data.meals && data.meals.length > 0) {
       displaySearchResult(data.meals[0]);
     } else {
-      // If no meal found, try searching by ingredient
       const ingredientResponse = await fetch(
         `https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(query)}`,
       );
       const ingredientData = await ingredientResponse.json();
 
       if (ingredientData.meals && ingredientData.meals.length > 0) {
-        // Fetch full details of the first ingredient result
         const mealId = ingredientData.meals[0].idMeal;
         const detailResponse = await fetch(
           `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`,
@@ -216,7 +213,6 @@ function displaySearchResult(meal) {
   const ingredients = [];
   const measures = [];
 
-  // Extract ingredients and measures
   for (let i = 1; i <= 20; i++) {
     const ingredient = meal[`strIngredient${i}`];
     const measure = meal[`strMeasure${i}`];
